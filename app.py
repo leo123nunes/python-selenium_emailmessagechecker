@@ -1,0 +1,2 @@
+class ChromeAuto:
+    pass
