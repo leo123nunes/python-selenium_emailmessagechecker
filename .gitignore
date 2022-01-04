@@ -1,6 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-email.py
+email_data.py
 *.py[cod]
 *$py.class
 
