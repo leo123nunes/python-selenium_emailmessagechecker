@@ -1,5 +1,11 @@
 from app import ChromeAuto
 
-chrome_auto = ChromeAuto()
+chrome = ChromeAuto()
 
-chrome_auto.open_browser()
+try:
+
+    chrome.open_browser()
+    chrome.signin()
+
+except Exception as e:
+    print(e)
