@@ -93,9 +93,9 @@ class ChromeAuto:
             print(f'You have {quantity_msgs} unread messages.')
             return
 
-    
-        
-
+    def exit(self):
+        time.sleep(1)
+        self.driver.quit()
 
 
 
