@@ -19,6 +19,7 @@ class ChromeAuto:
 
     def open_browser(self):
         self.driver.get('https://outlook.live.com/owa/')
+        self.driver.maximize_window()
 
     def signin(self):
         try:
@@ -54,7 +55,7 @@ class ChromeAuto:
 
     def check_staysignedin(self):
 
-        time.sleep(2)
+        time.sleep(1)
 
         try:
 
@@ -79,7 +80,18 @@ class ChromeAuto:
         if len(password_error) > 0:
             raise Exception('Incorrect password.')
         
+    def check_unread_msgs(self):
 
+        time.sleep(3)
+
+        quantity_msgs = int(self.driver.find_elements_by_class_name('PUV1mki0rYSBZsGVrzV9q')[3].text)
+
+        if quantity_msgs == 0:
+            print(f"You don't have unread messages.")
+            return
+        else:
+            print(f'You have {quantity_msgs} unread messages.')
+            return
 
     
         
